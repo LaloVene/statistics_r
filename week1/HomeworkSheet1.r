@@ -29,11 +29,7 @@
 ##    Fix the number of breaks to 11 using breaks
 set.seed(43)
 
-samples <- rnorm(30, mean = 6, sd = 4)
-hist(samples, xlim = c(-2, 12), breaks = 11, main = "Histogram of Random Samples", xlab = "Value", ylab = "Frequency")
-
 ##  b)  What do you observe in a?
-print("a")
 
 
 ###############
