@@ -131,14 +131,21 @@ plot(density(S$RT))
 
 ## j) What is the difference between the two?
 
+## Answer - h) produces a histogram, showing the frequency of the data in a given interval, i) however creates
+##          a density plot, a smooth curve showing the density according to the normal distributions used
+
 # ________________________________________________________________________________
 
 ## k) Is this data likely from a normal distribution? How would you check ?
 ##    (describe in words, remember to comment out text)
-
+## Answer - No this is not data from a normal distribution, you can check visually and look for a bell shape or 
+##          do a normality test like the shapiro-wilk test, which confirms it is not from a normal distribution 
+shapiro.test(S$RT)
 # ________________________________________________________________________________
 
 ## l) Looking at the graph, do you think the data is skewed? In which direction?
+## Answer - Yes the data is positively skewed 
+
 
 #############################################
 ### Exercise 5: Dataframes and boxplots
