@@ -12,8 +12,8 @@
 
 
 ## Please write below your (and your teammates) name, matriculation number. 
-## Name:
-## Matriculation number:
+## Name: Mahalakshmi, Eduardo, Elias
+## Matriculation number: 7071187
 
 ## Only 1 member needs to submit! 
 
@@ -30,14 +30,23 @@ t.test(USAccDeaths[1:12], USAccDeaths[61:72], alternative="greater")
 ## the following questions:
 
 ## a) Is the test significant at the alpha level of 0.05?
+# Yes, the test is significant at alpha level of 0.05 since the p-value is 0.02151, which
+# is below 0.05. So, we can reject null hypothesis. 
 
 ## b) What is the probability that this result is subject to a Type I error?
+# There is ~2.15% probability that this result is subject to a Type I error(false positive)
 
 ## c) Is this output also suited to tell you something about the Type II error probability?
+# No, the output does not tell anything about the Type II error. The t-test only gives us p-value,
+# which tells us about Type I error. It doesn't give β value which is the probability associated with Type II error
 
 ## d) Is this test one-tailed or two-tailed?
+# The test is one-tailed because the command says alternate = "greater". This means we are only
+# checking one direction of difference(number of deaths in 1973 is greater than in 1978)
 
 ## e) Do you think the test should be one-tailed or two-tailed?
+# I think the test should be two-tailed because we don't have specific prediction about the direction beforehand.
+# As mentioned in the lecture, two-tailed tests are more conservative and reduce the risk of making Type I error
 
 ###############################################################
 ### Exercise 3: Confidence interval
