@@ -12,8 +12,8 @@
 
 
 ## Please write below your (and your teammates) name, matriculation number. 
-## Name: Mahalakshmi, Eduardo, Elias
-## Matriculation number: 7071187
+## Name: Mahalakshmi, Elias, Eduardo
+## Matriculation number: 7071187, 7055205
 
 ## Only 1 member needs to submit! 
 
@@ -91,21 +91,39 @@ sample15 = sample(rivers,15)
 ## and what their preferred and most consumed drink is.
 
 ## a. Load the libraries stringr, dplyr, tidyr and forcats
+install.packages("stringr")
+install.packages("dplyr")
+install.packages("tidyr")
+install.packages("forcats")
+
+library("stringr")
+library("dplyr")
+library("tidyr")
+library("forcats")
 
 ## b. read in the data
+getwd()
+insomnia <- read.csv("/home/elias/Documents/StatsWithR/statistics_r/week2/insomnia25.csv")
 
 ## c. get a summary of the dataset
+glimpse(insomnia)
 
 ## d. the variable sleepProblem should be a numerical variable and have 0 for no Problem 
 ##    and 1 for sleep problems.
 ##    Make sure that this is the case
+insomnia %>%
+    filter(sleepProblem >= 0, sleepProblem <= 1)
 
 ## e. how many students encounter sleep problems?
+insomnia %>%
+    count(insomnia$sleepProblem == 1)
 
 ## f. how many different drinks do students name? (transform the variable into a 
 ## factor first)
+drinks <- as.factor(insomnia$drink)
 
 ## g. collapse factor levels which were spelled wrong
 
 ## h. Assign your cleaned dataset to clean
+
 
