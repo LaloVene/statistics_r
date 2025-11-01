@@ -16,7 +16,7 @@
 ## Matriculation number: 7071187
 ## Name: Eduardo Venegas
 ## Matriculation number: 7069924
-## Name: Elias
+## Name: Elias Hornetz
 ## Matriculation number:7055205
 
 ## Only 1 member needs to submit! 
@@ -193,13 +193,23 @@ insomnia %>%
 insomnia %>%
     filter(sleepProblem == 1) %>%
     nrow()
+## 24 Students encounter sleep problems
 
 ## f. how many different drinks do students name? (transform the variable into a 
 ## factor first)
 drinks <- as.factor(insomnia$drink)
+nlevels(drinks)
+drinks
+## They name 7 drinks but because of some are spelled wrong they actually name 3
 
 ## g. collapse factor levels which were spelled wrong
+collapsed <- fct_collapse(drinks, 
+    coffee = c("coffee", "cofee", "coffe", "Koffee"),
+    tea = c("tea", "tee")
+    )
 
 ## h. Assign your cleaned dataset to clean
+clean <- insomnia %>%
+    mutate(drink = collapsed)
 
 
